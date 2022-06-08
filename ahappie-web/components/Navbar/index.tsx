@@ -1,4 +1,5 @@
 import Link from "next/link";
+import NavLink from "./NavLink";
 const Navbar = () => {
   return (
     <nav>
@@ -9,17 +10,8 @@ const Navbar = () => {
           </h1>
         </Link>
         <div className="ml-8 flex flex-row gap-8 flex-1">
-          <Link href="/">
-            <div className="cursor-pointer">
-              <h2 className="font-semibold text-sky-600">Home</h2>
-            </div>
-          </Link>
-
-          <Link href="/">
-            <div className="cursor-pointer">
-              <h2 className="font-semibold text-sky-600">Maaltijden</h2>
-            </div>
-          </Link>
+          <NavLink to="/" name="Home" />
+          <NavLink to="/maaltijden" name="Maaltijden" />
         </div>
       </div>
     </nav>
